@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Caliburn.Micro.ExposedProperties</id>
+    <version>1.0.0</version>
+    <title>Caliburn.Micro.ExposedProperties</title>
+    <authors>Kristian Hellang</authors>
+    <owners>Kristian Hellang</owners>
+    <projectUrl>https://github.com/khellang/Caliburn.Micro.ExposedProperties</projectUrl>
+    <iconUrl>http://www.caliburnproject.org/CaliburnIcon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small Caliburn.Micro extension to allow exposing Model properties through a ViewModel with a simple attribute.</description>
+    <copyright>Copyright Kristian Hellang 2013</copyright>
+    <tags>Convention ViewModel Model Property Binding</tags>
+    <dependencies>
+      <dependency id="Caliburn.Micro" version="1.4.1" />
+    </dependencies>
+  </metadata>
+</package>
