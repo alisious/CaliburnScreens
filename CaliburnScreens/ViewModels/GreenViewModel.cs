@@ -9,6 +9,8 @@ namespace CaliburnScreens.ViewModels
 {
     public class GreenViewModel :Screen
     {
+        
+
         private string _destinationField = "";
         public string DestinationField 
         {
@@ -48,7 +50,7 @@ namespace CaliburnScreens.ViewModels
         }
 
 
-        private bool _canSearchAutomatically = false;
+        private bool _canSearchAutomatically = true;
         public bool CanSearchAutomatically
         {
             get { return _canSearchAutomatically; }

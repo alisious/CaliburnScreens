@@ -6,25 +6,35 @@
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Green" FontSize="30" FontWeight="ExtraBold" VerticalAlignment="Center" Foreground="Green"/>
+        <GroupBox>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <Label Content="Osoba sprawdzana" FontSize="30" FontWeight="Bold" Foreground="Green" Height="48"/>
+            <CheckBox x:Name="CanSearchAutomatically"  Content="Szukaj automatycznie" HorizontalAlignment="Left" IsThreeState="False" Margin="10,0,0,0"/>
+            
+        </StackPanel>
+        </GroupBox>
         <TextBox x:Name="SearchField" 
                  cal:Message.Attach="[Event TextChanged] = [Action CopyField]"
                  HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="166">
-            
-            
-          
+
+
+
         </TextBox>
         <TextBlock x:Name="DestinationField" HorizontalAlignment="Left" Margin="10,26,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="166"/>
         <Button x:Name="ForceCopyField"  
                 Content="Szukaj" 
                 HorizontalAlignment="Left" Margin="193,13,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <CheckBox x:Name="CanSearchAutomatically"  Content="szukaj automatycznie" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" IsThreeState="False"/>
+        
     </Grid>
 </UserControl>
