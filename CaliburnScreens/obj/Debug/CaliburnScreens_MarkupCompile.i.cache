@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-X:\GitHub\CaliburnScreens\CaliburnScreens\obj\Debug\
+D:\GitHub\CaliburnScreens\CaliburnScreens\obj\Debug\
 CaliburnScreens
 none
 false
 DEBUG;TRACE
-X:\GitHub\CaliburnScreens\CaliburnScreens\App.xaml
+D:\GitHub\CaliburnScreens\CaliburnScreens\App.xaml
 5-1986304806
 
-18-1578428748
-162143554712
+24904980502
+17-743300021
 MainWindow.xaml;Views\AppView.xaml;Views\GreenView.xaml;Views\MainView.xaml;Views\RedView.xaml;
 
 False

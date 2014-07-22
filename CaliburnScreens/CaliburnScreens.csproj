@@ -44,6 +44,7 @@
       <HintPath>..\packages\Caliburn.Micro.2.0.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.2.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -65,6 +66,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="-\Caliburn\Micro\Validation\DirectoryExistsAttribute.cs" />
+    <Compile Include="-\Caliburn\Micro\Validation\EmailAttribute.cs" />
+    <Compile Include="-\Caliburn\Micro\Validation\FileExistsAttribute.cs" />
+    <Compile Include="-\Caliburn\Micro\Validation\MultipleEmailAttribute.cs" />
+    <Compile Include="-\Caliburn\Micro\Validation\ValidatingScreen.cs" />
+    <Compile Include="-\Caliburn\Micro\Validation\ValidationGroupAttribute.cs" />
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="ViewModels\AppViewModel.cs" />
     <Compile Include="ViewModels\GreenViewModel.cs" />

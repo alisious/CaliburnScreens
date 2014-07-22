@@ -24,10 +24,18 @@
             
         </StackPanel>
         </GroupBox>
-        <TextBox x:Name="SearchField" 
+        <TextBox x:Name="SearchField" Text="{Binding Path=SearchField, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
                  cal:Message.Attach="[Event TextChanged] = [Action CopyField]"
                  HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="166">
-
+            <Validation.ErrorTemplate>
+                <ControlTemplate>
+                    <StackPanel>
+                        <!-- Placeholder for the TextBox itself -->
+                        <AdornedElementPlaceholder x:Name="textBox"/>
+                        <TextBlock Text="{Binding [0].ErrorContent}" Foreground="Red"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Validation.ErrorTemplate>
 
 
         </TextBox>
