@@ -34,7 +34,7 @@ namespace CaliburnScreens.ViewModels
 
         private string _searchField = "";
 
-        [Required(ErrorMessage = "SearchField is required.")]
+        [Required(ErrorMessage = "Pole jest wymagane!")]
         [MinLength(3,ErrorMessage="Tekst powinien być dłuższy niż 3 znaki.")]
         public string SearchField
         {
@@ -45,6 +45,7 @@ namespace CaliburnScreens.ViewModels
                 
                 _searchField = value;
                 NotifyOfPropertyChange(() => SearchField);
+                NotifyOfPropertyChange(() => CanForceCopyField);
                 
                
             }
@@ -53,7 +54,7 @@ namespace CaliburnScreens.ViewModels
 
         public void CopyField()
         {
-            if (SearchField.Length >= 3 && CanSearchAutomatically)
+            if (CanForceCopyField && CanSearchAutomatically)
                 ForceCopyField();
                
         }
@@ -64,6 +65,11 @@ namespace CaliburnScreens.ViewModels
             DestinationField = SearchField;
         }
 
+        
+        public bool CanForceCopyField
+        {
+            get { return SearchField.Length >= 3; }
+        }
 
         private bool _canSearchAutomatically = true;
         public bool CanSearchAutomatically
@@ -77,29 +83,7 @@ namespace CaliburnScreens.ViewModels
 
 
         }
-        /*
-                public string Error
-                {
-                    get { return null; }
-                }
-
-                public string this[string columnName]
-                {
-                    get
-                    {
-                        switch (columnName)
-                        {
-                            case "SearchField":
-                                if (String.IsNullOrEmpty(this.SearchField) || this.SearchField.Length < 3)
-                                    return "Wpis nie może być krótszy niż 3 znaki!";
-                                break;
-                        }
-
-                        return string.Empty;
-                    }
-                }
-
-                */
+        
         
     }
 }
