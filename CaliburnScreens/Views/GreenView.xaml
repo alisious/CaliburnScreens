@@ -54,6 +54,10 @@
         <Button x:Name="ForceCopyField"  
                 Content="Szukaj" 
                 HorizontalAlignment="Left" Margin="215,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        
+        <Button x:Name="ShowRedScreen"
+                Content="Show Red Screen"
+                Width="100" 
+                Height="40"
+                Grid.Column="1"/>
     </Grid>
 </UserControl>

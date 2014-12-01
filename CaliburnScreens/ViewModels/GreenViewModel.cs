@@ -83,7 +83,13 @@ namespace CaliburnScreens.ViewModels
 
 
         }
-        
+
+        public void ShowRedScreen()
+        {
+            var p = this.Parent as Conductor<IScreen>.Collection.OneActive;
+            p.ActivateItem(p.Items[0]);
+
+        }
         
     }
 }
